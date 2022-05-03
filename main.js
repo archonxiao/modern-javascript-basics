@@ -8,14 +8,35 @@ const username = {
 username.name = 'archon';
 username.email = 'archonxiao@test.com';
 
-function init() {
-    // if (true) {
-    //     var email = 'archonxiao@test.com';
-    //     let email = 'archonxiao@test.com';
-    //     document.getElementById('output').innerHTML = email;
-    // }
+// const init = () => {
+//     document.getElementById('output').innerHTML = `${username.name} (${username.email})`;
+// }
 
-    document.getElementById('output').innerHTML = `${username.name} (${username.email})`;
-}
+// const nameString = () => `${username.name} (${username.email})`;
 
-init();
+// document.getElementById('output').innerHTML = nameString();
+
+// let users = [
+//     {
+//         name: 'Andrew',
+//         email: 'andrew@example.com'
+//     },
+//     {
+//         name: 'Asheley',
+//         email: 'ashley@example.com'
+//     }
+// ];
+
+// let names = [];
+
+// users.forEach(user => names.push(user.name));
+
+// document.getElementById('output').innerHTML = names.join(', ');
+
+document.getElementById('btn').addEventListener('click', function() {
+    
+    const getDetails = () => `The button id is ${this.getAttribute('id')}`;
+
+    document.getElementById('output').innerHTML = getDetails();
+
+});
